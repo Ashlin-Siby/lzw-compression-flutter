@@ -13,15 +13,17 @@ dart pub add lzw_compress
 And then to use it in your applications:
 
 ```dart
-import 'package:lzw_compress';
+  import 'package:lzw_compression/lzw_compression.dart';
 
-// to compress objects
-const compressed = lzwCompress.compress("Hello");
+  LZW lzwCompress = LZW();
 
-// to uncompress
-const original = lzwCompress.decompress(compressed);
+  // to compress objects
+  List<int> compressed = lzwCompress.compress("Hello");
 
-print(original);
+  // to uncompress
+  String original = lzwCompress.decompress(compressed);
+
+  print(original);
 ```
 
 ### License
